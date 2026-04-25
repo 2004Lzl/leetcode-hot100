@@ -1,0 +1,14 @@
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        char_set=set()
+        ans=0
+        left=0
+        for right in range(len(s)):
+            while s[right] in char_set:
+                char_set.remove(s[left])
+                left+=1
+            char_set.add(s[right])
+            ans=max(len(char_set),ans)
+        return ans
+#中等难度 滑动窗口问题
+#反思：本题之所以用set 是因为set具有快速查询的优势（哈希）同时不需要用到[数组]的查询功能：因为我们只需要判断一个元素是否在集合中
