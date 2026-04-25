@@ -1,0 +1,2 @@
+# leetcode-hot100
+记录一个统计专业学生为求职而开始的几乎零基础leetcode hot100刷题学习之路
